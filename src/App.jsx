@@ -9,7 +9,7 @@ function App() {
   const [userData, setUserData] = useState([])
   async function getData() {
     try {
-      const store = await axios.get("http://localhost:3003/data");
+      const store = await axios.get("https://dataentry-backend-gxad.onrender.com/data");
       console.log(store.data);
       setUserData([...store.data])
 
@@ -36,7 +36,7 @@ function App() {
 
     onSubmit: async (values) => {
       try {
-        await axios.post("http://localhost:3003/data", values);
+        await axios.post("https://dataentry-backend-gxad.onrender.com/data", values);
         alert("Data Entered")
         getData()
       } catch (error) {
