@@ -33,7 +33,7 @@ function App() {
       return errors;
 
     },
-
+   // https://dataentry-backend-gxad.onrender.com
     onSubmit: async (values) => {
       try {
         await axios.post("https://dataentry-backend-gxad.onrender.com/data", values);
@@ -51,15 +51,15 @@ function App() {
 
   return (
     <>
-      <div className='container '>
-        <div className='row mt-5 '>
+      <div className='container-fluid entry  '>
+        <div className='row mt-5'>
           <div className='col-lg-6 mt-2'>
             <div className='row  '>
-              <div className='col-lg-12 bg mt-4 '>
+              <div className='col-lg-12 mt-4 '>
                 <h3 className='head'>Attendance Entry</h3>
               </div>
             </div>
-            <div className='row bg ml-5'>
+            <div className='row ml-5'>
               <form onSubmit={formik.handleSubmit}>
               <div class="mb-3">
                   <label class="form-label">Date</label>
@@ -82,10 +82,15 @@ function App() {
               </form>
             </div>
           </div>
-          <div className='col-lg-6 mt-5'>
-            <table className="table">
+          <div className='col-lg-6 mt-4'>
+          <div className='row  '>
+              <div className='col-lg-12 mt-3  '>
+                <h3 className='head'>Employee Data</h3>
+              </div>
+           </div>
+            <table className="table mt-4">
               <thead>
-                <tr className='ritab'>
+                <tr >
                   <th className="col">Date</th>
                   <th className="col">Employee Id</th>
                   <th className="col">Employee Name</th>

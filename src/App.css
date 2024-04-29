@@ -9,6 +9,14 @@
     text-align: center;
     margin-top: 20px;
 }
-.ritab{
+.display{
+    display: flex;
+    justify-content: space-between;
+}
+.entry{
     background-color:rgba(203, 122, 30, 0.603) ;
 }
+.tb{
+    background-color: bisque;
+}
+
